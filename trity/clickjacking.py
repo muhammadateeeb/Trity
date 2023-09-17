@@ -62,16 +62,16 @@ def clickjacking():
 	    z = f.readlines()
        
         except:
-            print "Error"
-            print "sites.txt does not exist!"
+            print ("Error")
+            print ("sites.txt does not exist!")
             sys.exit(0)
         for x in z[0:]:
-    	     print " \nChecking... "+x
+    	     print (" \nChecking... "+x)
     	     if check(x):
-        	     print "*** The website is VULNERABLE to clickjacking! ***"
+        	     print ("*** The website is VULNERABLE to clickjacking! ***")
         	     Create_Poc(x)
-        	     print " Created a poc and saved to Clickjacking.html"
+        	     print (" Created a poc and saved to Clickjacking.html")
     	     elif not check(x):
-        	     print " The website is not vulnerable!"
+        	     print (" The website is not vulnerable!")
 
     main()
