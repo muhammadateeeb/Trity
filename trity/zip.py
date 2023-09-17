@@ -27,7 +27,7 @@ class color:
    FAIL = '\033[91m'
 
 def zipfile():
-	print ""+C+"Files have to be in the same directory - Include .zip or .txt"
+	print (""+C+"Files have to be in the same directory - Include .zip or .txt")
 	zipfilename = raw_input(''+T+'' + color.UNDERLINE + 'Zip file>' + color.END)
 	dictionary = raw_input(''+T+'' + color.UNDERLINE + 'Dictionary file>' + color.END)
 	print (""+G+"[*] "+W+"Cracking...")
@@ -41,4 +41,4 @@ def zipfile():
 				password = 'Password found: %s' % password
 			except:
 				pass
-	print ""+G+"[!] "+W+"Password found: " + password
+	print (""+G+"[!] "+W+"Password found: " + password)
