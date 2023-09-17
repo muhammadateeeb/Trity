@@ -71,9 +71,9 @@ if str(platform.system()) != "Linux":
 	sys.exit(""+R+"[!] " + color.UNDERLINE + "\033[91m" + "You are not using a Linux Based OS! Linux is a must-have for this script!" + color.END)
 if not os.geteuid() == 0:
     sys.exit(""+R+"[!] " + color.UNDERLINE + "\033[91m" + "Must be run as root. :/" + color.END)
-if 'no' in open('agree.txt').read():# take out the trity/
-    print (color.BOLD + """
-Note that Trity is provided as is, and is a royalty free open-source application.
+if 'no' in open('agree.txt').read():  # take out the trity/
+    print(color.BOLD + """
+Note that Trity is provided as is, and is a royalty-free open-source application.
 
 Feel free to modify, use, change, market, do whatever you want with it as long as you give the appropriate credit where credit is due (which means giving the authors the credit they deserve for writing it).
 
