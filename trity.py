@@ -67,35 +67,28 @@ GR = '\033[37m' # gray
 T  = '\033[93m' # tan
 M = '\033[1;35;32m' # magenta
 os.system('clear')
+
 if str(platform.system()) != "Linux":
-	sys.exit(""+R+"[!] " + color.UNDERLINE + "\033[91m" + "You are not using a Linux Based OS! Linux is a must-have for this script!" + color.END)
+    sys.exit(f"{R}[!] {color.UNDERLINE}\033[91mYou are not using a Linux Based OS! Linux is a must-have for this script!{color.END}")
+
 if not os.geteuid() == 0:
-    sys.exit(""+R+"[!] " + color.UNDERLINE + "\033[91m" + "Must be run as root. :/" + color.END)
+    sys.exit(f"{R}[!] {color.UNDERLINE}\033[91mMust be run as root. :/{color.END}")
+
 if 'no' in open('agree.txt').read():  # take out the trity/
-    print(color.BOLD + """Note that Trity is provided as is, and is a royalty-free open-source application.""")
-    agree = raw_input(''+G+'' + color.UNDERLINE + 'Do you agree to these terms and conditions?>' + color.END)
-    if agree == "yes":
-	print (''+G+'' + color.UNDERLINE + 'Thanks!' + color.END)
-	time.sleep(3)
-	FILE = open("agree.txt","w")# take out the trity/
-        FILE.write('yes')
-        FILE.close()
-    elif agree == "y":
-	print (''+G+'' + color.UNDERLINE + 'Thanks!' + color.END)
-	time.sleep(3)
-	FILE = open("agree.txt","w")# take out the trity/
-        FILE.write('yes')
-        FILE.close()
-    elif agree == "Yes":
-	print (''+G+'' + color.UNDERLINE + 'Thanks!' + color.END)
-	time.sleep(3)
-	FILE = open("agree.txt","w")# take out the trity/
+    print(f"{color.BOLD}Note that Trity is provided as is, and is a royalty-free open-source application.")
+    agree = input(f"{G}{color.UNDERLINE}Do you agree to these terms and conditions?>{color.END}")
+    
+    if agree.lower() in ["yes", "y"]:
+        print(f"{G}{color.UNDERLINE}Thanks!{color.END}")
+        time.sleep(3)
+        FILE = open("agree.txt", "w")  # take out the trity/
         FILE.write('yes')
         FILE.close()
     else:
-	print (''+R+'' + color.UNDERLINE + '[!] You have to agree!' + color.END)
-	time.sleep(1)
-	sys.exit()
+        print(f"{R}{color.UNDERLINE}[!] You have to agree!{color.END}")
+        time.sleep(1)
+        sys.exit()
+
 os.system('clear')
 banner()
 #============================================================#
