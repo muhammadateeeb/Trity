@@ -110,30 +110,30 @@ banner()
 #============================================================#
 def banner1():
     print ""
-    print ""+M+"|----- Made by _t0x1c aka toxic -----|"
-    print color.DARKCYAN +"|-----      Version: 3.0.1      -----|"
-    print color.WARNING + "|-----   1 tool - 35 choices    -----|"
-    print color.RED + "|-----  www.toxic-ig.github.io  -----|"
-    print color.PURPLE + "\n|----- A Warm Welcome to Trity! -----|"
-    print color.BLUE + "|----- Network Pentesting tool! -----|"
-    print color.YELLOW + "|----- Have Fun and Stay Legal! -----|"
+    print (""+M+"|----- Made by _t0x1c aka toxic -----|")
+    print (color.DARKCYAN +"|-----      Version: 3.0.1      -----|")
+    print (color.WARNING + "|-----   1 tool - 35 choices    -----|")
+    print (color.RED + "|-----  www.toxic-ig.github.io  -----|")
+    print (color.PURPLE + "\n|----- A Warm Welcome to Trity! -----|")
+    print (color.BLUE + "|----- Network Pentesting tool! -----|")
+    print (color.YELLOW + "|----- Have Fun and Stay Legal! -----|")
 
 time.sleep(0.1)
-print ""
+print ("")
 time.sleep(0.1)
-print ""+M+"|----- Made by _t0x1c aka toxic -----|" 
+print (""+M+"|----- Made by _t0x1c aka toxic -----|")
 time.sleep(0.1)
-print color.DARKCYAN + "|-----      Version: 3.0.1      -----|"
+print (color.DARKCYAN + "|-----      Version: 3.0.1      -----|")
 time.sleep(0.1)
-print color.WARNING + "|-----   1 tool - 35 choices    -----|"
+print (color.WARNING + "|-----   1 tool - 35 choices    -----|")
 time.sleep(0.1) 
-print color.RED + "|-----  www.toxic-ig.github.io  -----|"
+print (color.RED + "|-----  www.toxic-ig.github.io  -----|")
 time.sleep(0.1)
-print color.PURPLE + "\n|----- A Warm Welcome to Trity! -----|"
+print (color.PURPLE + "\n|----- A Warm Welcome to Trity! -----|")
 time.sleep(0.1)
-print color.BLUE + "|----- Awesome Pentesting tool! -----|"
+print (color.BLUE + "|----- Awesome Pentesting tool! -----|")
 time.sleep(0.1)
-print color.YELLOW + "|----- Have Fun and Stay Legal! -----|"
+print (color.YELLOW + "|----- Have Fun and Stay Legal! -----|")
 time.sleep(0.1)
 r = requests.get('http://pastebin.com/raw/vYcBSV4w') 
 
@@ -156,63 +156,63 @@ def tritymain():
             elif main == "info":
                 info()
             elif main == "help":
-                print ""+W+"+----------------------------+"
-                print ""+C+"help "+W+"- displays this help message"
-                print ""+C+"clear "+W+"- clears the screen"
-                print ""+C+"exit "+W+"- exits tool"
-                print ""+C+"tool "+W+"- displays info about the tool"
-                print ""+C+"info "+W+"- displays computer and network info"
-                print ""+C+"cd "+W+"- change working directories"
-                print ""+C+"ls "+W+"- see files in working directory"
-                print ""+W+"+----------------------------+"
-                print ""+P+"echo "+W+"- echo given words"
-                print ""+P+"speak "+W+"- text to speech"
-                print ""+P+"ping "+W+"- ping a host"
-                print ""+P+"banner "+W+"- print a new banner"
-                print ""+P+"joke "+W+"- tell a joke"
-                print ""+P+"quote "+W+"- print a quote"
-                print ""+P+"contact "+W+"- contact me"
-                print ""+W+"+----------------------------+"
-                print ""+R+"website "+W+"- enter a website and get its ip"
-	        print ""+R+"clone"+W+" - clone a websites source "
-	        print ""+R+"whois"+W+" - whois a website"
-	        print ""+R+"web"+W+" - extract info from a website"
-	        print ""+R+"siteexists"+W+" - check if a site exists"
-	        print ""+R+"google"+W+" - find google results for a query"
-	        print ""+R+"clickjacking"+W+" - test websites for clickjacking vulnerability"
-                print ""+W+"+----------------------------+"
-	        print ""+G+"ip "+W+"- geolocate an ip"
-                print ""+W+"+----------------------------+"
-	        print ""+O+"spoof mac"+W+" - spoof mac address"
-                print ""+W+"+----------------------------+"
-	        print ""+T+"email "+W+"- bomb an email address"
-	        print ""+T+"spoof email "+W+"- spoof an email address"
-	        print ""+T+"sms"+W+" - spam text messages "
-	        print ""+T+"crack"+W+" - bruteforce an email"
-	        print ""+T+"anonymous"+W+" - send an anonymous email"
-                print ""+T+"facebook"+W+" - bruteforce a facebook account"
-                print ""+T+"twitter"+W+" - check the details of a twitter account"
-                print ""+W+"+----------------------------+"
-	        print color.CYAN + "craft"+W+" - generate useful scripts "
-	        print color.CYAN + "qr"+W+" - generate a qr code"
-	        print color.CYAN + "zip"+W+" - crack a password-protected zip file"
-                print ""+W+"+----------------------------+"
-	        print color.BLUE + "encode base64"+W+" - text to base64"
-	        print color.BLUE + "decode base64"+W+" - base64 to text"
-	        print color.BLUE + "encode hex"+W+" - text to hex"
-	        print color.BLUE + "decode hex"+W+" - hex to text"
-                print ""+W+"+----------------------------+"
+                print (""+W+"+----------------------------+")
+                print (""+C+"help "+W+"- displays this help message")
+                print (""+C+"clear "+W+"- clears the screen")
+                print (""+C+"exit "+W+"- exits tool")
+                print (""+C+"tool "+W+"- displays info about the tool")
+                print (""+C+"info "+W+"- displays computer and network info")
+                print (""+C+"cd "+W+"- change working directories")
+                print (""+C+"ls "+W+"- see files in working directory")
+                print (""+W+"+----------------------------+")
+                print (""+P+"echo "+W+"- echo given words")
+                print (""+P+"speak "+W+"- text to speech")
+                print (""+P+"ping "+W+"- ping a host")
+                print (""+P+"banner "+W+"- print a new banner")
+                print (""+P+"joke "+W+"- tell a joke")
+                print (""+P+"quote "+W+"- print a quote")
+                print (""+P+"contact "+W+"- contact me")
+                print (""+W+"+----------------------------+")
+                print (""+R+"website "+W+"- enter a website and get its ip")
+	        print (""+R+"clone"+W+" - clone a websites source ")
+	        print (""+R+"whois"+W+" - whois a website")
+	        print (""+R+"web"+W+" - extract info from a website")
+	        print (""+R+"siteexists"+W+" - check if a site exists")
+	        print (""+R+"google"+W+" - find google results for a query")
+	        print (""+R+"clickjacking"+W+" - test websites for clickjacking vulnerability")
+                print (""+W+"+----------------------------+")
+	        print (""+G+"ip "+W+"- geolocate an ip")
+                print (""+W+"+----------------------------+")
+	        print (""+O+"spoof mac"+W+" - spoof mac address")
+                print (""+W+"+----------------------------+")
+	        print (""+T+"email "+W+"- bomb an email address")
+	        print (""+T+"spoof email "+W+"- spoof an email address")
+	        print (""+T+"sms"+W+" - spam text messages ")
+	        print (""+T+"crack"+W+" - bruteforce an email")
+	        print (""+T+"anonymous"+W+" - send an anonymous email")
+                print (""+T+"facebook"+W+" - bruteforce a facebook account")
+                print (""+T+"twitter"+W+" - check the details of a twitter account")
+                print (""+W+"+----------------------------+")
+	        print (color.CYAN + "craft"+W+" - generate useful scripts ")
+	        print (color.CYAN + "qr"+W+" - generate a qr code")
+	        print (color.CYAN + "zip"+W+" - crack a password-protected zip file")
+                print (""+W+"+----------------------------+")
+	        print (color.BLUE + "encode base64"+W+" - text to base64")
+	        print (color.BLUE + "decode base64"+W+" - base64 to text")
+	        print (color.BLUE + "encode hex"+W+" - text to hex")
+	        print (color.BLUE + "decode hex"+W+" - hex to text")
+                print (""+W+"+----------------------------+")
             elif main == "spoof mac":
-	        print ""+C+"1 - Random MAC address"
-	        print ""+C+"2 - Set MAC address"
-	        print ""+C+"3 - See available addresses"
+	        print (""+C+"1 - Random MAC address")
+	        print (""+C+"2 - Set MAC address")
+	        print (""+C+"3 - See available addresses")
 	        while True:
 	            spoofmac = raw_input(''+G+'' + color.UNDERLINE + 'Tri>Spoof>' + color.END)
 	            if spoofmac == "1":
 		        try:
 	                    inter = raw_input(''+T+'' + color.UNDERLINE + 'Interface>' + color.END)
 	                    os.system('spoof-mac.py randomize ' + inter)
-	                    print ""+G+"[*] Done! "+C+"To change you MAC Address back to your original, restart your computer\n or set your MAC address to your original"
+	                    print (""+G+"[*] Done! "+C+"To change you MAC Address back to your original, restart your computer\n or set your MAC address to your original")
 		        except:
 		            print (""+R+"[!] " + color.UNDERLINE + "\033[91m" + "Oops.... Something went wrong!" + color.END)
 	            elif spoofmac == "2":
@@ -220,8 +220,8 @@ def tritymain():
 	                    inter = raw_input(''+T+'' + color.UNDERLINE + 'Interface>' + color.END)
 		            setmac = raw_input(''+T+'' + color.UNDERLINE + 'New MAC>' + color.END)
 	                    os.system('spoof-mac.py set ' + setmac + ' ' + inter)
-			    print ""+C+"Keep in mind you won't have internet during the time of your spoofed MAC!"
-		            print ""+G+"[*] Done!"+C+" To change you MAC Address back to your original, restart your computer\n or set your MAC address to your original"
+			    print (""+C+"Keep in mind you won't have internet during the time of your spoofed MAC!")
+		            print "("+G+"[*] Done!"+C+" To change you MAC Address back to your original, restart your computer\n or set your MAC address to your original")
 		        except:
 		            print (""+R+"[!] " + color.UNDERLINE + "\033[91m" + "Oops... Something went wrong!" + color.END)
 	            elif spoofmac == "3":
