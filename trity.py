@@ -72,8 +72,7 @@ if str(platform.system()) != "Linux":
 if not os.geteuid() == 0:
     sys.exit(""+R+"[!] " + color.UNDERLINE + "\033[91m" + "Must be run as root. :/" + color.END)
 if 'no' in open('agree.txt').read():  # take out the trity/
-    print(color.BOLD + """
-Note that Trity is provided as is, and is a royalty-free open-source application.""")
+    print(color.BOLD + """Note that Trity is provided as is, and is a royalty-free open-source application.""")
     agree = raw_input(''+G+'' + color.UNDERLINE + 'Do you agree to these terms and conditions?>' + color.END)
     if agree == "yes":
 	print (''+G+'' + color.UNDERLINE + 'Thanks!' + color.END)
