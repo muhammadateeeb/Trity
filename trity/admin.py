@@ -40,8 +40,8 @@ def admin():
     def findAdmin():
 	    f = open("othr/link.txt","r");
 	    link = raw_input(''+T+'' + color.UNDERLINE + 'Site>' + color.END)
-	    print "\n\nAvailable links : \n"
-	    print ""+G+"[*] "+W+"Scanning..."
+	    print ("\n\nAvailable links : \n")
+	    print (""+G+"[*] "+W+"Scanning...")
 	    while True:
 		    sub_link = f.readline()
 		    if not sub_link:
@@ -55,5 +55,5 @@ def admin():
 		    except URLError as e:
 			    continue
 		    else:
-			    print ""+G+"Available -> "+W+"",req_link
+			    print (""+G+"Available -> "+W+"",req_link)
     findAdmin()
