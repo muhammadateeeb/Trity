@@ -1,12 +1,23 @@
 # coding: utf-8
 #!/usr/bin/env python
-import sys, platform, subprocess, socket, time, os, urllib, platform, random, string, smtplib, requests, urllib2, getpass, zipfile
+
+import sys
+import platform
+import os
+import socket
+import time
+import urllib
+import random
+import string
+import smtplib
+import requests
 from urllib2 import urlopen
 from termcolor import colored
-from time import sleep
 from getpass import getpass
 from subprocess import call
+
 sys.path.append('trity/')
+
 from smtp import *
 from sms import *
 from gmail import *
@@ -30,6 +41,7 @@ from hex import *
 from searchs import *
 from zip import *
 from emaill import *
+
 try:
     import netifaces
     import scapy
@@ -39,24 +51,26 @@ try:
     import argparse
     import google
 except ImportError:
-    print (color.UNDERLINE + "\033[91m" + "You don't have some modules installed! \nPlease run install.py to install this tool fully! " + color.END)
+    print(color.UNDERLINE + "\033[91m" + "You don't have some modules installed!\nPlease run install.py to install this tool fully!" + color.END)
     sys.exit()
+
 class color:
-   PURPLE = '\033[95m'
-   CYAN = '\033[96m'
-   DARKCYAN = '\033[36m'
-   BLUE = '\033[94m'
-   GREEN = '\033[92m'
-   YELLOW = '\033[93m'
-   RED = '\033[91m'
-   BOLD = '\033[1m'
-   UNDERLINE = '\033[4m'
-   END = '\033[0m'
-   HEADER = '\033[95m'
-   OKBLUE = '\033[94m'
-   OKGREEN = '\033[92m'
-   WARNING = '\033[93m'
-   FAIL = '\033[91m'
+    PURPLE = '\033[95m'
+    CYAN = '\033[96m'
+    DARKCYAN = '\033[36m'
+    BLUE = '\033[94m'
+    GREEN = '\033[92m'
+    YELLOW = '\033[93m'
+    RED = '\033[91m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+    END = '\033[0m'
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+
 W  = '\033[0m'  # white (normal)
 R  = '\033[31m' # red
 G  = '\033[32m' # green
@@ -67,6 +81,7 @@ C  = '\033[36m' # cyan
 GR = '\033[37m' # gray
 T  = '\033[93m' # tan
 M = '\033[1;35;32m' # magenta
+
 os.system('clear')
 
 if str(platform.system()) != "Linux":
@@ -75,14 +90,14 @@ if str(platform.system()) != "Linux":
 if not os.geteuid() == 0:
     sys.exit(f"{R}[!] {color.UNDERLINE}\033[91mMust be run as root. :/{color.END}")
 
-if 'no' in open('agree.txt').read():  # take out the trity/
+if 'no' in open('agree.txt').read():
     print(f"{color.BOLD}Note that Trity is provided as is, and is a royalty-free open-source application.")
-    agree = input(f"{G}{color.UNDERLINE}Do you agree to these terms and conditions?>{color.END}")
-    
+    agree = input(f"{G}{color.UNDERLINE}Do you agree to these terms and conditions? > {color.END}")
+
     if agree.lower() in ["yes", "y"]:
         print(f"{G}{color.UNDERLINE}Thanks!{color.END}")
         time.sleep(3)
-        FILE = open("agree.txt", "w")  # take out the trity/
+        FILE = open("agree.txt", "w")
         FILE.write('yes')
         FILE.close()
     else:
@@ -104,32 +119,15 @@ def banner1():
     print (color.PURPLE + "\n|----- A Warm Welcome to Trity! -----|")
     print (color.BLUE + "|----- Network Pentesting tool! -----|")
     print (color.YELLOW + "|----- Have Fun and Stay Legal! -----|")
-
-time.sleep(0.1)
-print ("")
-time.sleep(0.1)
-print (""+M+"|----- Made by _t0x1c aka toxic -----|")
-time.sleep(0.1)
-print (color.DARKCYAN + "|-----      Version: 3.0.1      -----|")
-time.sleep(0.1)
-print (color.WARNING + "|-----   1 tool - 35 choices    -----|")
-time.sleep(0.1) 
-print (color.RED + "|-----  www.toxic-ig.github.io  -----|")
-time.sleep(0.1)
-print (color.PURPLE + "\n|----- A Warm Welcome to Trity! -----|")
-time.sleep(0.1)
-print (color.BLUE + "|----- Awesome Pentesting tool! -----|")
-time.sleep(0.1)
-print (color.YELLOW + "|----- Have Fun and Stay Legal! -----|")
-time.sleep(0.1)
 r = requests.get('http://pastebin.com/raw/vYcBSV4w') 
-
 if '3.1' not in r.text:
     print (''+R+'\nYou need to update! The newest version is: ' + color.BOLD + color.UNDERLINE + r.text + '\n')
 else:
     print ('')
 swear = "fuck", "shit", "nigga", "bitch", "dick", "pussy", "cunt", "nigger", "asshole", "ass"
 spell = "helpp", "hellp", "bannerr", "baner", "emial", "HELP", "hwlp", "wesbite", "ehco", "anonymouss", "anonymouse", "toool", "tooll", "carft", "Info", "spooof", "spooff", "ecnode", "decde", "encde", "craftt", "qoute", "sitexists", "hlep", "claer"
+swear = ["swear_word_1", "swear_word_2", ...]
+spell = ["spell_word_1", "spell_word_2", ...]
 def tritymain():
     while True:
         try:
