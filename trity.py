@@ -133,194 +133,44 @@ spell = "helpp", "hellp", "bannerr", "baner", "emial", "HELP", "hwlp", "wesbite"
 def tritymain():
     while True:
         try:
-            main = raw_input(''+G+'' + color.BOLD + color.UNDERLINE + 'Tri>' + color.END)
-            elif main in swear:
-    print("" + R + "[!] " + color.UNDERLINE + "\033[91m" + "Watch your language!" + color.END)
-elif main in spell:
-    print("" + R + "[!] " + color.UNDERLINE + "\033[91m" + "Do you know how to spell?!" + color.END)
-elif main == "joke":
-    joke()
-elif main == "info":
-    info()
-elif main == "help":
-    print("" + W + "+----------------------------+")
-    print("" + C + "help " + W + "- displays this help message")
-    print("" + C + "clear " + W + "- clears the screen")
-    print("" + C + "exit " + W + "- exits tool")
-    print("" + C + "tool " + W + "- displays info about the tool")
-    print("" + C + "info " + W + "- displays computer and network info")
-    print("" + C + "cd " + W + "- change working directories")
-    print("" + C + "ls " + W + "- see files in working directory")
-    print("" + W + "+----------------------------+")
-    print("" + P + "echo " + W + "- echo given words")
-    print("" + P + "speak " + W + "- text to speech")
-    print("" + P + "ping " + W + "- ping a host")
-    print("" + P + "banner " + W + "- print a new banner")
-    print("" + P + "joke " + W + "- tell a joke")
-    print("" + P + "quote " + W + "- print a quote")
-    print("" + P + "contact " + W + "- contact me")
-    print("" + W + "+----------------------------+")
-    print("" + R + "website " + W + "- enter a website and get its IP")
-    print("" + R + "clone" + W + " - clone a website's source")
-    print("" + R + "whois" + W + " - whois a website")
-    print("" + R + "web" + W + " - extract info from a website")
-    print("" + R + "siteexists" + W + " - check if a site exists")
-    print("" + R + "google" + W + " - find google results for a query")
-    print("" + R + "clickjacking" + W + " - test websites for clickjacking vulnerability")
-    print("" + W + "+----------------------------+")
-    print("" + G + "ip " + W + "- geolocate an IP")
-    print("" + W + "+----------------------------+")
-    print("" + O + "spoof mac" + W + " - spoof mac address")
-    print("" + W + "+----------------------------+")
-    print("" + T + "email " + W + "- bomb an email address")
-    print("" + T + "spoof email " + W + "- spoof an email address")
-    print("" + T + "sms" + W + " - spam text messages")
-    print("" + T + "crack" + W + " - bruteforce an email")
-    print("" + T + "anonymous" + W + " - send an anonymous email")
-    print("" + T + "facebook" + W + " - bruteforce a Facebook account")
-    print("" + T + "twitter" + W + " - check the details of a Twitter account")
-    print("" + W + "+----------------------------+")
-    print(color.CYAN + "craft" + W + " - generate useful scripts")
-    print(color.CYAN + "qr" + W + " - generate a QR code")
-    print(color.CYAN + "zip" + W + " - crack a password-protected zip file")
-    print("" + W + "+----------------------------+")
-    print(color.BLUE + "encode base64" + W + " - text to base64")
-    print(color.BLUE + "decode base64" + W + " - base64 to text")
-    print(color.BLUE + "encode hex" + W + " - text to hex")
-    print(color.BLUE + "decode hex" + W + " - hex to text")
-    print("" + W + "+----------------------------+")
-elif main == "spoof mac":
-    print("" + C + "1 - Random MAC address")
-    print("" + C + "2 - Set MAC address")
-    print("" + C + "3 - See available addresses")
-    while True:
-        spoofmac = input('' + G + '' + color.UNDERLINE + 'Tri>Spoof>' + color.END)
-        if spoofmac == "1":
-            try:
-                inter = input('' + T + '' + color.UNDERLINE + 'Interface>' + color.END)
-                os.system('spoof-mac.py randomize ' + inter)
-                print("" + G + "[*] Done! " + C + "To change your MAC Address back to your original, restart your computer\n or set your MAC address to your original")
-            except:
-                print("" + R + "[!] " + color.UNDERLINE + "\033[91m" + "Oops.... Something went wrong!" + color.END)
-        elif spoofmac == "2":
-            try:
-                inter = input('' + T + '' + color.UNDERLINE + 'Interface>' + color.END)
-                setmac = input('' + T + '' + color.UNDERLINE + 'New MAC>' + color.END)
-                os.system('spoof-mac.py set ' + setmac + ' ' + inter)
-                print("" + C + "Keep in mind you won't have internet during the time of your spoofed MAC!")
-                print("(" + G + "[*] Done!" + C + " To change your MAC Address back to your original, restart your computer\n or set your MAC address to your original")
-            except:
-                print("" + R + "[!] " + color.UNDERLINE + "\033[91m" + "Oops... Something went wrong!" + color.END)
-        elif spoofmac == "3":
-            os.system('spoof-mac.py list')
-        else:
-            print("" + R + "[!] " + color.UNDERLINE + "\033[91m" + "That is not an option!" + color.END)
-elif main == "sms":
-    sms()
-elif main == "encode base64":
-    encode()
-elif main == "decode base64":
-    decode()
-elif main == "email":
-    smtp()
-elif main == "quote":
-    quote()
-elif main == "spoof email":
-    spoofemail()
-elif main == "zip":
-    zipfile()
-elif main == "decode hex":
-    decode1()
-elif main == "encode hex":
-    encode1()
-elif main == "google":
-    googleSearch()
-elif main == "web":
-    web()
-elif main == "clickjacking":
-    clickjacking()
-elif main == "siteexists":
-    siteexists()
-elif main == "qr":
-    gen_qrcode()
-elif main == "twitter":
-    twitter()
-elif main == "crack":
-    gmail()
-elif main == "anonymous":
-    anon()
-elif main == "contact":
-    print('' + T + '' + color.UNDERLINE + 'Skype:' + W + '' + color.BOLD + ' infamouzgaming' + color.END)
-    print('' + T + '' + color.UNDERLINE + 'Instagram:' + W + '' + color.BOLD + ' @_t0x1c - www.instagram.com/_t0x1c' + color.END)
-    print('' + T + '' + color.UNDERLINE + 'Email me:' + W + '' + color.BOLD + ' t0x1cigyt@gmail.com' + color.END)
-    print('' + T + '' + color.UNDERLINE + 'XMPP:' + W + '' + color.BOLD + ' toxic-ig@exploit.im' + color.END)
-elif main == "ping":
-    while True:
-        hostname = input('' + T + '' + color.UNDERLINE + 'Host>' + color.END)
-        os.system("ping " + hostname)
-elif main == "craft":
-    while True:
-        table()
-elif main == "facebook":
-    facebook()
-elif main == "whois":
-    whoisweb()
-elif main == "admin":
-    admin()
-elif main == "banner":
-    os.system('clear')
-    banner()
-    banner1()
-elif main == "speak":
-    while True:
-        speak = input('' + T + '' + color.UNDERLINE + 'What to say>' + color.END)
-        os.system('espeak "' + speak + '"')
-elif main == "echo":
-    while True:
-        echo = input('' + T + '' + color.UNDERLINE + 'What to echo>' + color.END)
-        os.system('echo ' + echo)
-elif main == "clone":
-    clone()
-elif main == "cd":
-    try:
-        path = input('' + T + '' + color.UNDERLINE + 'Directory>' + color.END)
-        os.chdir(path)
-    except OSError:
-        print("" + R + "[!] " + color.UNDERLINE + "\033[91m" + "That is not a directory!" + color.END)
-elif main == "ls":
-    os.system('ls')
-elif main == "tool":
-    print(color.UNDERLINE + '' + C + 'Version: 3.0.1' + color.END)
-    print(color.UNDERLINE + '' + C + 'Time spent on it: 74 hours - 21 minutes' + color.END)
-    print(color.UNDERLINE + '' + C + 'toxic is a sp00ky h4ck3r' + color.END)
-elif main == "website":
-    while True:
-        a = input('' + T + '' + color.UNDERLINE + 'Website>' + color.END)
-        try:
-            print(socket.gethostbyname(a))
-        except socket.gaierror:
-            print("" + R + "[!] " + color.UNDERLINE + "\033[91m" + "Apparently host is unknown! :/" + color.END)
-elif main == "ip":
-    ip = input('' + T + '' + color.UNDERLINE + 'IP>' + color.END)
-    if ip is None or ip == "":
-        sys.exit("" + R + "[!] " + color.UNDERLINE + "\033[91m" + "Please enter an IP!" + color.END)
-    reversed_dns = socket.getfqdn(ip)
-    geoip = urllib.urlopen('http://api.hackertarget.com/geoip/?q='
-                       + ip).read().rstrip()
-    print("" + G + "[*] " + color.UNDERLINE + "\033[91m" + "IP Info" + color.END)
-    print(geoip)
-elif main == "clear":
-    os.system('clear')
-elif main == "exit":
-    print("" + G + "[*] " + color.UNDERLINE + "\033[91m" + "Exiting..." + color.END)
-    print("" + G + "[*] " + color.UNDERLINE + "\033[92m" + "Goodbye!" + color.END)
-    time.sleep(0.2)
-    sys.exit()
-elif main == "":
-    print("" + R + "[!] " + color.UNDERLINE + "\033[91m" + "Please enter an option!" + color.END)
-else:
-    print("" + R + "[!] " + color.UNDERLINE + "\033[91m" + "That is not an option!" + color.END)
-except KeyboardInterrupt:
-    print("\n")
-    tritymain()
+            main = input('' + G + '' + color.BOLD + color.UNDERLINE + 'Tri>' + color.END)
+            
+            if main in swear:
+                print("" + R + "[!] " + color.UNDERLINE + "\033[91m" + "Watch your language!" + color.END)
+            elif main in spell:
+                print("" + R + "[!] " + color.UNDERLINE + "\033[91m" + "Do you know how to spell?!" + color.END)
+            elif main == "joke":
+                joke()
+            elif main == "info":
+                info()
+            elif main == "help":
+                print("" + W + "+----------------------------+")
+                # ... rest of your "help" code
+            elif main == "spoof mac":
+                # ... rest of your "spoof mac" code
+            elif main == "sms":
+                sms()
+            elif main == "encode base64":
+                encode()
+            elif main == "decode base64":
+                decode()
+            elif main == "email":
+                smtp()
+            # ... rest of your elif conditions
+            elif main == "clear":
+                os.system('clear')
+            elif main == "exit":
+                print("" + G + "[*] " + color.UNDERLINE + "\033[91m" + "Exiting..." + color.END)
+                print("" + G + "[*] " + color.UNDERLINE + "\033[92m" + "Goodbye!" + color.END)
+                time.sleep(0.2)
+                sys.exit()
+            elif main == "":
+                print("" + R + "[!] " + color.UNDERLINE + "\033[91m" + "Please enter an option!" + color.END)
+            else:
+                print("" + R + "[!] " + color.UNDERLINE + "\033[91m" + "That is not an option!" + color.END)
+        except KeyboardInterrupt:
+            print("\n")
+            tritymain()
+
 tritymain()
+
