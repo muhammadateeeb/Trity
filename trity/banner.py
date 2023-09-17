@@ -112,4 +112,4 @@ _)      \.___.,|     .'
      `-'       `--' 
 """
     headers = [header, oblique, modular, speed, skull, lastthing, lol]
-    print headers[randint(0,6)]
+    print (headers[randint(0,6)])
