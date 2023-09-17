@@ -72,14 +72,14 @@ if str(platform.system()) != "Linux":
 if not os.geteuid() == 0:
     sys.exit(""+R+"[!] " + color.UNDERLINE + "\033[91m" + "Must be run as root. :/" + color.END)
 if 'no' in open('agree.txt').read():# take out the trity/
-    print color.BOLD + """
+    print (color.BOLD + """
 Note that Trity is provided as is, and is a royalty free open-source application.
 
 Feel free to modify, use, change, market, do whatever you want with it as long as you give the appropriate credit where credit is due (which means giving the authors the credit they deserve for writing it).
 
 Also by using this tool, you should try to make this tool better, try to stay positive, try to help others, try to learn from one another, try stay out of drama, try offer free hugs when possible (and make sure recipient agrees to mutual hug), and try to do everything you can to be awesome.
 Trity is designed purely for good and not evil. If you are planning on using this tool for malicious purposes that are not authorized by the company you are performing assessments for, you are violating the terms of service and license of this toolset. By hitting yes (only one time), you agree to the terms of service and that you will only use this tool for lawful purposes only.
-"""
+""")
     agree = raw_input(''+G+'' + color.UNDERLINE + 'Do you agree to these terms and conditions?>' + color.END)
     if agree == "yes":
 	print (''+G+'' + color.UNDERLINE + 'Thanks!' + color.END)
