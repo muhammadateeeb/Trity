@@ -41,7 +41,7 @@ def smtp():
     spam_msg = "From: {} \r\nTo: {} \r\nSubject: {} \r\n\r\n {}".format(gmail, phone_num, subject, message)
 
     sleep(1)
-    print ""+G+"[*] Sending..."
+    print (""+G+"[*] Sending...")
     for i in range(counter):
         o.sendmail(gmail, phone_num, spam_msg)
-    print ''+G+'[*] Success! Emails Sent! '+W+''
+    print (''+G+'[*] Success! Emails Sent! '+W+'')
