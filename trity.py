@@ -2,6 +2,7 @@
 #!/usr/bin/env python
 import sys, platform, subprocess, socket, time, os, urllib, platform, random, string, smtplib, requests, urllib2, getpass, zipfile
 from urllib2 import urlopen
+from termcolor import colored
 from time import sleep
 from getpass import getpass
 from subprocess import call
