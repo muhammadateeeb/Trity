@@ -31,5 +31,5 @@ def spoofemail():
      too = raw_input(''+T+'' + color.UNDERLINE + 'To email>' + color.END)
      subject = raw_input(''+T+'' + color.UNDERLINE + 'Subject>' + color.END)
      isp = raw_input(''+T+'' + color.UNDERLINE + 'Your isp>' + color.END)
-     print C + "Type your message here, and when your done, press Ctrl-d." + W
+     print (C + "Type your message here, and when your done, press Ctrl-d." + W)
      os.system('sendEmail -f "' + fromm + '<' + emaill + '>" -t ' + too + ' -u "' + subject + '" -s ' + isp)
