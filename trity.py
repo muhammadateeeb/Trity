@@ -95,7 +95,7 @@ banner()
 #------------------- Onto the real stuff --------------------#
 #============================================================#
 def banner1():
-    print ""
+    print ("")
     print (""+M+"|----- Made by _t0x1c aka toxic -----|")
     print (color.DARKCYAN +"|-----      Version: 3.0.1      -----|")
     print (color.WARNING + "|-----   1 tool - 35 choices    -----|")
